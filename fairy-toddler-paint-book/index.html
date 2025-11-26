@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fairy Toddler Paint Book – Cute Fairy Coloring App for Kids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Fairy Toddler Paint Book is a cute and simple fairy coloring app for toddlers and preschoolers. Safe for kids, no web browsing, with a parental gate."
+  />
+
+  <meta property="og:title" content="Fairy Toddler Paint Book" />
+  <meta
+    property="og:description"
+    content="A magical fairy coloring app for toddlers. Safe, simple, and fun!"
+  />
+  <meta property="og:image" content="https://balljovi.github.io/assets/fairy-cover.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fdf7ff;
+      color: #333;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #8b8bff;
+    }
+
+    .badge {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #efecff;
+      border: 1px solid #d6d1ff;
+      color: #6b6bff;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-box {
+      background: white;
+      padding: 22px;
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      border: 1px solid #ede2ff;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid #eadbff;
+      color: #666;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff7ac4, #e86ab2);
+      color: white;
+      box-shadow: 0 8px 18px rgba(255,122,196,0.32);
+    }
+
+    .btn-ghost {
+      background: white;
+      border: 1px solid #d6d1ff;
+      color: #6b6bff;
+    }
+
+    .phone {
+      background: #fff7ff;
+      border-radius: 26px;
+      padding: 18px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      border: 1px solid #eedfff;
+    }
+
+    .phone-inner {
+      border-radius: 20px;
+      background: white;
+      border: 1px solid #f5e8ff;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 12px;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .section {
+      margin-top: 32px;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid #ede2ff;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 760px) {
+      .two-cols {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff7ac4, #8b8bff);
+      margin-top: 5px;
+    }
+
+    .screenshots {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      .screenshots {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .shot {
+      height: 140px;
+      background: #f1e6ff;
+      border-radius: 16px;
+      border: 1px dashed #ceb6ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+      padding: 5px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-text">BallJovi Kids Studio</div>
+      <div class="badge">Kids • Coloring • Ages 2–6</div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-box">
+        <h1 class="hero-title">A magical fairy coloring app<br>for toddlers & preschoolers</h1>
+
+        <p class="hero-sub">
+          Fairy Toddler Paint Book is a cute and simple coloring app designed especially
+          for young children. Safe, friendly, and perfect for developing creativity and focus.
+        </p>
+
+        <div class="pills">
+          <div class="pill">No web browsing</div>
+          <div class="pill">Parental gate</div>
+          <div class="pill">Toddler-friendly UI</div>
+          <div class="pill">Offline play</div>
+        </div>
+
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="#" target="_blank">Download on App Store</a>
+          <a class="btn btn-ghost" href="#" target="_blank">Get it on Google Play</a>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-inner">
+          Replace with your app screenshot<br>
+          (1080×1920 recommended)
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <h2>Why parents & kids love it</h2>
+
+      <div class="two-cols">
+        <div>
+          <h3>For parents</h3>
+          <ul>
+            <li><div class="dot"></div>Safe for kids – no external links</li>
+            <li><div class="dot"></div>Includes parental gate</li>
+            <li><div class="dot"></div>Simple and clean interface</li>
+            <li><div class="dot"></div>Works fully offline</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>For children</h3>
+          <ul>
+            <li><div class="dot"></div>Cute fairy characters</li>
+            <li><div class="dot"></div>Big buttons, easy controls</li>
+            <li><div class="dot"></div>Soft and friendly colors</li>
+            <li><div class="dot"></div>Relaxing and creative fun</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="section">
+      <h2>App Screenshots</h2>
+
+      <div class="screenshots">
+        <div class="shot">Screenshot 1</div>
+        <div class="shot">Screenshot 2</div>
+        <div class="shot">Screenshot 3</div>
+        <div class="shot">Screenshot 4</div>
+        <div class="shot">Screenshot 5</div>
+        <div class="shot">Screenshot 6</div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section">
+      <h2>Support & Privacy</h2>
+      <ul>
+        <li>
+          <div class="dot"></div>
+          <strong>Privacy Policy:</strong>
+          <a href="#" target="_blank">View Privacy Policy</a>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <strong>Contact:</strong>
+          <a href="mailto:your@email.com">your@email.com</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> BallJovi Kids Studio</div>
+      <div>Fairy Toddler Paint Book</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
